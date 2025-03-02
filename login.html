@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta name="description" content="">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="">
+
+      
+      <!-- Font Links -->
+
+
+      <title></title>
+      <!-- SEO Description -->
+      <meta name="description" content="">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      
+      <!-- Header Scripts -->
+      <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+          document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+      </script>
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+      // render the settings object
+      //console.log('settings', [object Object]);
+      document.addEventListener('DOMContentLoaded', function() {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '#4A6FFF',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8', 
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '#F5F7FF',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3', 
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '#FF6B6B',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3', 
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Roboto, sans-serif', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Open Sans, sans-serif', 'Inter', 'system-ui', 'sans-serif'],
+                body: ['Open Sans, sans-serif', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      });
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta name="robots" content="">
+      <meta name="google-site-verification" content="">
+      <meta name="baidu-verification" content="">
+      <meta name="yandex-verification" content="">
+      <meta name="bing-verification" content="">
+      <meta property="og:title" content="">
+      <meta property="og:description" content="">
+      <meta property="og:image" content="">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="">
+      <meta name="twitter:description" content="">
+      <meta name="twitter:image" content="">
+    
+      
+      <!-- Font Links -->
+     
+      <link rel="icon" type="image/x-icon" href="">
+
+      <style>
+        h1, h2, h3, h4, h5, h6 {
+          font-family: Roboto, sans-serif, Inter, system-ui, sans-serif;
+        }
+        body {
+          font-family: Open Sans, sans-serif, Inter, system-ui, sans-serif;
+        }
+      </style>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+   </body>
+</html><script>window.projectId = "4e7c77bc-63d4-493a-8fee-2d498dd12b09";</script><div id='RolloutPageContent'><element id="dd218a75-fca9-47d2-8740-0142cb77275f" data-section-id="dd218a75-fca9-47d2-8740-0142cb77275f">
+
+
+<div id="root">
+  <header id="header">
+    <nav class="bg-white shadow-md px-6 py-4">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="#hero" class="text-2xl font-bold text-[#4A6FFF]">AuthSystem</a>
+        
+        <!-- Desktop Navigation -->
+        <ul class="hidden md:flex space-x-8">
+          <li><a href="#hero" class="text-gray-800 hover:text-[#4A6FFF] transition-colors">Home</a></li>
+          <li><a href="#signup" class="text-gray-800 hover:text-[#4A6FFF] transition-colors">Sign Up</a></li>
+          <li><a href="#login" class="text-gray-800 hover:text-[#4A6FFF] transition-colors">Login</a></li>
+          
+        </ul>
+        
+        <!-- Mobile Navigation Button -->
+        <button id="mobile-menu-button" class="md:hidden" aria-label="Toggle navigation menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white py-2 absolute top-16 left-0 right-0 shadow-md z-10">
+        <ul class="flex flex-col space-y-2 px-6">
+          <li><a href="#hero" class="block py-2 text-gray-800 hover:text-[#4A6FFF] transition-colors">Home</a></li>
+          <li><a href="#signup" class="block py-2 text-gray-800 hover:text-[#4A6FFF] transition-colors">Sign Up</a></li>
+          <li><a href="#login" class="block py-2 text-gray-800 hover:text-[#4A6FFF] transition-colors">Login</a></li>
+          <li><a href="#features" class="block py-2 text-gray-800 hover:text-[#4A6FFF] transition-colors">Features</a></li>
+          <li><a href="#security" class="block py-2 text-gray-800 hover:text-[#4A6FFF] transition-colors">Security</a></li>
+          <li><a href="#faq" class="block py-2 text-gray-800 hover:text-[#4A6FFF] transition-colors">FAQ</a></li>
+          <li><a href="#contact" class="block py-2 text-gray-800 hover:text-[#4A6FFF] transition-colors">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <script>
+      document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+  </header>
+</div>
+</element><element id="f98a6551-400e-4ec0-812e-1f477dcc8e01" data-section-id="f98a6551-400e-4ec0-812e-1f477dcc8e01">
+
+
+<div id="root">
+  <section id="hero" class="bg-neutral-900 text-white min-h-[70vh] flex items-center">
+    <div class="container mx-auto px-6 py-16">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-10 md:mb-0 animate__animated animate__fadeInLeft">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Secure User Authentication System</h1>
+          <p class="text-xl mb-8 text-gray-300">Create an account or sign in to access our platform. Your data security is our top priority.</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#signup" class="bg-[#4A6FFF] hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-center">Get Started</a>
+            <a href="#login" class="bg-transparent hover:bg-white/10 border border-white text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-center">Login</a>
+          </div>
+        </div>
+        <div class="md:w-1/2 animate__animated animate__fadeInRight">
+          <div class="bg-[#F5F7FF] p-8 rounded-xl shadow-2xl text-neutral-800">
+            <div class="flex mb-6">
+              <button id="signup-tab" class="w-1/2 py-3 font-semibold text-center border-b-2 border-[#4A6FFF] text-[#4A6FFF]">Sign Up</button>
+              <button id="login-tab" class="w-1/2 py-3 font-semibold text-center border-b-2 border-gray-200 text-gray-500">Login</button>
+            </div>
+            
+            <!-- Sign Up Form -->
+            <form id="signup-form" class="space-y-4">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#4A6FFF] focus:border-[#4A6FFF]" required>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#4A6FFF] focus:border-[#4A6FFF]" required>
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#4A6FFF] focus:border-[#4A6FFF]" required>
+              </div>
+              <div>
+                <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                <input type="text" id="address" name="address" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#4A6FFF] focus:border-[#4A6FFF]" required>
+              </div>
+              <div>
+                <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                <input type="text" id="username" name="username" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#4A6FFF] focus:border-[#4A6FFF]" required>
+              </div>
+              <div>
+                <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                <input type="password" id="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#4A6FFF] focus:border-[#4A6FFF]" required>
+              </div>
+              <button type="submit" class="w-full bg-[#4A6FFF] hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition duration-300">Create Account</button>
+            </form>
+            
+            <!-- Login Form (Hidden by default) -->
+            <form id="login-form" class="space-y-4 hidden">
+              <div>
+                <label for="login-username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                <input type="text" id="login-username" name="login-username" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#4A6FFF] focus:border-[#4A6FFF]" required>
+              </div>
+              <div>
+                <label for="login-password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                <input type="password" id="login-password" name="login-password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#4A6FFF] focus:border-[#4A6FFF]" required>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-[#4A6FFF] focus:ring-[#4A6FFF] border-gray-300 rounded">
+                  <label for="remember-me" class="ml-2 block text-sm text-gray-700">Remember me</label>
+                </div>
+                <a href="#" class="text-sm text-[#4A6FFF] hover:underline">Forgot password?</a>
+              </div>
+              <button type="submit" class="w-full bg-[#4A6FFF] hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition duration-300">Sign In</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Tab switching logic
+    document.getElementById('signup-tab').addEventListener('click', function() {
+      document.getElementById('signup-form').classList.remove('hidden');
+      document.getElementById('login-form').classList.add('hidden');
+      document.getElementById('signup-tab').classList.add('border-[#4A6FFF]', 'text-[#4A6FFF]');
+      document.getElementById('signup-tab').classList.remove('border-gray-200', 'text-gray-500');
+      document.getElementById('login-tab').classList.add('border-gray-200', 'text-gray-500');
+      document.getElementById('login-tab').classList.remove('border-[#4A6FFF]', 'text-[#4A6FFF]');
+    });
+
+    document.getElementById('login-tab').addEventListener('click', function() {
+      document.getElementById('login-form').classList.remove('hidden');
+      document.getElementById('signup-form').classList.add('hidden');
+      document.getElementById('login-tab').classList.add('border-[#4A6FFF]', 'text-[#4A6FFF]');
+      document.getElementById('login-tab').classList.remove('border-gray-200', 'text-gray-500');
+      document.getElementById('signup-tab').classList.add('border-gray-200', 'text-gray-500');
+      document.getElementById('signup-tab').classList.remove('border-[#4A6FFF]', 'text-[#4A6FFF]');
+    });
+  </script>
+</div>
+</element><element id="a34b174c-ccf7-466c-b421-2042d230fc3e" data-section-id="a34b174c-ccf7-466c-b421-2042d230fc3e">
+
